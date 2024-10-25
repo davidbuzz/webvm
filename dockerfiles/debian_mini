@@ -14,6 +14,7 @@ RUN echo "use 'su -' to become root, and enter the root password , also 'passwor
 RUN apt-get -y install python3-pip
 RUN python3 -m pip install empy==3.3.4
 RUN python3 -m pip install pexpect
+RUN python3 -m pip install future
 
 # leave enough to hopefully buld sitl.
 RUN echo "getting some ardupilot sources..."
