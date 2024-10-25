@@ -357,7 +357,7 @@ __      __   _  __   ____  __
 	async function loadCX()
 	{
 		// Find the latest build
-		var r = await fetch("https://cheerpxdemos.leaningtech.com/publicdeploy/LATEST.txt");
+		var r = await fetch("https://davidbuzz.github.io/webvm2/publicdeploy/LATEST.txt");
 		var url = await r.text();
 		url = url.trim();
 		var script = document.createElement('script');
