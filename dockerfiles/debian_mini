@@ -13,7 +13,7 @@ RUN echo "use 'su -' to become root, and enter the root password , also 'passwor
 # ardupilot build deps - these come from the network, so we need to bake them in so that tailscale/networking is optional later on.
 RUN apt-get -y install python3-pip
 RUN python3 -m pip install empy==3.3.4
-
+RUN python3 -m pip install pexpect
 
 # leave enough to hopefully buld sitl.
 RUN echo "getting some ardupilot sources..."
@@ -50,5 +50,6 @@ WORKDIR /home/user/
 CMD [ "/bin/bash","-c","chown -R user:user /home/user"]
 ENV HOME="/home/user" TERM="xterm" USER="user" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8" LC_ALL="C"
 RUN git config --global --add safe.directory /home/user/ardupilot
+RUN git config --global --add safe.directory /mnt/ardupilot
 CMD [ "/bin/bash","-c","chown -R user:user /home/user"]
 CMD [ "/bin/bash" ]
