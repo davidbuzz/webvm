@@ -17,7 +17,7 @@ RUN python3 -m pip install pexpect
 RUN python3 -m pip install future
 
 RUN python3 -m pip install --upgrade setuptools
-RUN python3 -m pip install lxml
+RUN python3 -m pip install lxml=4.8.0
 
 RUN python3 -m pip install pymavlink
 
