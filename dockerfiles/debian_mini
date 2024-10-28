@@ -15,7 +15,10 @@ RUN apt-get -y install python3-pip
 RUN python3 -m pip install empy==3.3.4
 RUN python3 -m pip install pexpect
 RUN python3 -m pip install future
+
+RUN python3 -m pip install --upgrade setuptools
 RUN python3 -m pip install lxml
+
 RUN python3 -m pip install pymavlink
 
 
